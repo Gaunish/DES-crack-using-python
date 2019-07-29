@@ -1,0 +1,21 @@
+{
+    "cs50": {
+        "debug": {
+            "@name": {},
+            "@pid": {},
+            "@proxy": {},
+            "@runner": {}
+        },
+        "simple": {
+            "settings": {
+                "@revision": 3
+            }
+        }
+    },
+    "general": {
+        "@stripws": true
+    },
+    "language": {
+        "@undeclaredVars": true
+    }
+}

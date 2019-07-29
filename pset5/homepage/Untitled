@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> visitor-management frontend </title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+<header class = "main">
+<H1> hi</H1>
+</header>
+
+<div class = "main">
+yo
+</div>
+</body>
+
+
+</html>

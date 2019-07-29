@@ -1,0 +1,48 @@
+.nav
+{
+    background-color: #676767;
+    height:50px;
+    color:white;
+    font-size:30px;
+    margin-top:10px;
+    margin-left:5px;
+    margin-right:5px;
+    font-family:times new roman;
+    text-align:centre;
+    border:2px solid;
+    border-readius:10px;
+}
+
+.main
+{
+    font-size:30px;
+    background-color: #0cbaba;
+    height:50px;
+    color:white;
+    text-align:left;
+    margin-top:10px;
+    margin-left:5px;
+    margin-right:5px;
+   font-family:times new roman;
+    border:2px solid;
+    border-readius:10px;
+}
+
+.link
+{
+  font-family:times new roman;
+  text-align:center;
+  float:left;
+  width :20% ;
+  margin-top :10px;
+  font-size:25px;
+}
+
+.link a
+{
+padding:6px;
+background-color: #0cbaba;
+margin :2px;
+color:white;
+display:block;
+}

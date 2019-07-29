@@ -1,0 +1,985 @@
+
+
+Thu Jul 18 2019 03:02:01 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./resize..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="6976"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="1"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:206
+
+{"path":"/pset3/resize/more/resize.c","line":78,"column":0,"text":"resize.c","content":"","time":1563418920503,"enabled":true,"fullpath":"/home/ubuntu/pset3/resize/more/resize.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/resize/more/resize.c:79"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000428866",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="79",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset3/resize/more/resize.c:79"}
+SENDING: Content-Length:341
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000428866","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"79","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset3/resize/more/resize.c:79"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/local/lib/libcs50.so.9 from remote target...\n"
+GDB: =library-loaded,id="/usr/local/lib/libcs50.so.9",target-name="/usr/local/lib/libcs50.so.9",host-name="target:/usr/local/lib/libcs50.so.9",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff799ac20",to="0x00007ffff799b8da"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7607a80",to="0x00007ffff76c62f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff73e2bb0",to="0x00007ffff73f10f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71d7200",to="0x00007ffff71da70c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6fd1e50",to="0x00007ffff6fd2bde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6dbbac0",to="0x00007ffff6dcc3fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff69e92d0",to="0x00007ffff6b61c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+
+Child exited with status 1
+
+GDB: ~"[Inferior 1 (process 6976) exited with code 01]\n"
+GDB: =thread-group-exited,id="i1",exit-code="01"
+GDB: *stopped,reason="exited",exit-code="01"
+
+
+Thu Jul 18 2019 03:02:19 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./resize..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="7101"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="3"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:215
+
+{"path":"/pset3/resize/more/resize.c","line":78,"column":0,"text":"resize.c","content":"","time":1563418920503,"enabled":true,"fullpath":"/home/ubuntu/pset3/resize/more/resize.c","command":"bp-set","_id":2,"id":"1"}
+4-break-insert "/home/ubuntu/pset3/resize/more/resize.c:79"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x0000000000428866",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="79",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset3/resize/more/resize.c:79"}
+SENDING: Content-Length:341
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x0000000000428866","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"79","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset3/resize/more/resize.c:79"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/local/lib/libcs50.so.9 from remote target...\n"
+GDB: =library-loaded,id="/usr/local/lib/libcs50.so.9",target-name="/usr/local/lib/libcs50.so.9",host-name="target:/usr/local/lib/libcs50.so.9",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff799ac20",to="0x00007ffff799b8da"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7607a80",to="0x00007ffff76c62f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff73e2bb0",to="0x00007ffff73f10f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71d7200",to="0x00007ffff71da70c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6fd1e50",to="0x00007ffff6fd2bde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6dbbac0",to="0x00007ffff6dcc3fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff69e92d0",to="0x00007ffff6b61c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+
+Child exited with status 1
+
+GDB: ~"[Inferior 1 (process 7101) exited with code 01]\n"
+GDB: =thread-group-exited,id="i1",exit-code="01"
+GDB: *stopped,reason="exited",exit-code="01"
+
+
+Thu Jul 18 2019 03:02:47 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./resize..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="7260"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="1"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:205
+
+{"path":"/pset3/resize/more/resize.c","line":5,"column":0,"text":"resize.c","content":"","time":1563418961866,"enabled":true,"fullpath":"/home/ubuntu/pset3/resize/more/resize.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/pset3/resize/more/resize.c:6"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042815e",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="6",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset3/resize/more/resize.c:6"}
+SENDING: Content-Length:339
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x000000000042815e","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"6","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset3/resize/more/resize.c:6"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/local/lib/libcs50.so.9 from remote target...\n"
+GDB: =library-loaded,id="/usr/local/lib/libcs50.so.9",target-name="/usr/local/lib/libcs50.so.9",host-name="target:/usr/local/lib/libcs50.so.9",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff799ac20",to="0x00007ffff799b8da"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7607a80",to="0x00007ffff76c62f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff73e2bb0",to="0x00007ffff73f10f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71d7200",to="0x00007ffff71da70c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6fd1e50",to="0x00007ffff6fd2bde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6dbbac0",to="0x00007ffff6dcc3fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff69e92d0",to="0x00007ffff6b61c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+GDB: =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042815e",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="6",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset3/resize/more/resize.c:6"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 1, main (argc=1, argv=0x7fffffffe838) at resize.c:11\n"
+GDB: ~"11\t    if(argc!=4)\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="1",frame={addr="0x000000000042815e",func="main",args=[{name="argc",value="1"},{name="argv",value="0x7fffffffe838"}],file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="11"},thread-id="1",stopped-threads="all",core="1"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x000000000042815e",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="11"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="1"},{name="argv",type="char **",value="0x7fffffffe838"}]}]
+8-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 8^done,locals=[{name="infile",type="char *",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\""},{name="outfile",type="char *",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\""},{name="sresize",type="char *",value="0x1 <error: Cannot access memory at address 0x1>"},{name="num",type="int",value="0"},{name="inptr",type="FILE *",value="0x8000"},{name="outptr",type="FILE *",value="0x0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="padding",type="int",value="0"},{name="padding1",type="int",value="2"}]
+9-var-update --all-values *
+
+GDB: 9^done,changelist=[]
+10-var-create - * padding1
+
+GDB: 10^done,name="var1",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+11-var-create - * padding
+
+GDB: 11^done,name="var2",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+12-var-create - * bi
+
+GDB: 12^done,name="var3",numchild="11",value="{...}",type="BITMAPINFOHEADER",thread-id="1",has_more="0"
+13-var-create - * bf
+
+GDB: 13^done,name="var4",numchild="5",value="{...}",type="BITMAPFILEHEADER",thread-id="1",has_more="0"
+14-var-create - * inptr
+
+GDB: 14^done,name="var5",numchild="29",value="0x8000",type="FILE *",thread-id="1",has_more="0"
+15-var-create - * num
+
+GDB: 15^done,name="var6",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+16-var-create - * sresize
+
+GDB: 16^done,name="var7",numchild="1",value="0x1 <error: Cannot access memory at address 0x1>",type="char *",thread-id="1",has_more="0"
+17-var-create - * outfile
+
+GDB: 17^done,name="var8",numchild="1",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"",type="char *",thread-id="1",has_more="0"
+18-var-create - * infile
+
+GDB: 18^done,name="var9",numchild="1",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"",type="char *",thread-id="1",has_more="0"
+19-var-create - * argv
+
+GDB: 19^done,name="var10",numchild="1",value="0x7fffffffe838",type="char **",thread-id="1",has_more="0"
+20-var-create - * argc
+
+GDB: 20^done,name="var11",numchild="0",value="1",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1443
+
+{"thread":"1","frames":[{"level":"0","addr":"0x000000000042815e","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"11","exists":true,"args":[{"name":"argc","type":"int","value":"1","objname":"var11","numchild":"0"},{"name":"argv","type":"char **","value":"0x7fffffffe838","address":140737488349240,"objname":"var10","numchild":"1"}],"locals":[{"name":"infile","type":"char *","value":"0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"","address":140737351932320,"objname":"var9","numchild":"1"},{"name":"outfile","type":"char *","value":"0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"","address":4361581,"objname":"var8","numchild":"1"},{"name":"sresize","type":"char *","value":"0x1 <error: Cannot access memory at address 0x1>","address":1,"objname":"var7","numchild":"1"},{"name":"num","type":"int","value":"0","objname":"var6","numchild":"0"},{"name":"inptr","type":"FILE *","value":"0x8000","address":32768,"objname":"var5","numchild":"29"},{"name":"outptr","type":"FILE *","value":"NULL","address":0},{"name":"bf","type":"BITMAPFILEHEADER","objname":"var4","numchild":"5"},{"name":"bi","type":"BITMAPINFOHEADER","objname":"var3","numchild":"11"},{"name":"padding","type":"int","value":"0","objname":"var2","numchild":"0"},{"name":"padding1","type":"int","value":"2","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:49
+
+{"name":"var10","command":"var-children","_id":4}
+21-var-list-children --simple-values var10
+
+GDB: 21^done,numchild="1",children=[child={name="var10.*argv",exp="*argv",numchild="1",value="0x7fffffffeae3 \"./resize\"",type="char *",thread-id="1"}],has_more="0"
+SENDING: Content-Length:183
+
+{"_id":4,"children":[{"name":"var10.*argv","exp":"*argv","numchild":"1","value":"0x7fffffffeae3 \"./resize\"","type":"char *","thread-id":"1","objname":"var10.*argv"}],"state":"done"}
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":5}
+22-exec-step 
+
+GDB: 22^running
+SENDING: Content-Length:51
+
+{"_seq":"22","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000428172",func="main",args=[{name="argc",value="1"},{name="argv",value="0x7fffffffe838"}],file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"},thread-id="1",stopped-threads="all",core="1"
+23-stack-list-frames 0 50
+
+GDB: 23^done,stack=[frame={level="0",addr="0x0000000000428172",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"}]
+24-stack-list-arguments --simple-values 0 50
+
+GDB: 24^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="1"},{name="argv",type="char **",value="0x7fffffffe838"}]}]
+25-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 25^done,locals=[{name="infile",type="char *",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\""},{name="outfile",type="char *",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\""},{name="sresize",type="char *",value="0x1 <error: Cannot access memory at address 0x1>"},{name="num",type="int",value="0"},{name="inptr",type="FILE *",value="0x8000"},{name="outptr",type="FILE *",value="0x0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="padding",type="int",value="0"},{name="padding1",type="int",value="2"}]
+26-var-update --all-values *
+
+GDB: 26^done,changelist=[]
+27-var-create - * padding1
+
+GDB: 27^done,name="var12",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+28-var-create - * padding
+
+GDB: 28^done,name="var13",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+29-var-create - * bi
+
+GDB: 29^done,name="var14",numchild="11",value="{...}",type="BITMAPINFOHEADER",thread-id="1",has_more="0"
+30-var-create - * bf
+
+GDB: 30^done,name="var15",numchild="5",value="{...}",type="BITMAPFILEHEADER",thread-id="1",has_more="0"
+31-var-create - * inptr
+
+GDB: 31^done,name="var16",numchild="29",value="0x8000",type="FILE *",thread-id="1",has_more="0"
+32-var-create - * num
+
+GDB: 32^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+33-var-create - * sresize
+
+GDB: 33^done,name="var18",numchild="1",value="0x1 <error: Cannot access memory at address 0x1>",type="char *",thread-id="1",has_more="0"
+34-var-create - * outfile
+
+GDB: 34^done,name="var19",numchild="1",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"",type="char *",thread-id="1",has_more="0"
+35-var-create - * infile
+
+GDB: 35^done,name="var20",numchild="1",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"",type="char *",thread-id="1",has_more="0"
+36-var-create - * argv
+
+GDB: 36^done,name="var21",numchild="1",value="0x7fffffffe838",type="char **",thread-id="1",has_more="0"
+37-var-create - * argc
+
+GDB: 37^done,name="var22",numchild="0",value="1",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1452
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000428172","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"13","exists":true,"args":[{"name":"argc","type":"int","value":"1","objname":"var22","numchild":"0"},{"name":"argv","type":"char **","value":"0x7fffffffe838","address":140737488349240,"objname":"var21","numchild":"1"}],"locals":[{"name":"infile","type":"char *","value":"0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"","address":140737351932320,"objname":"var20","numchild":"1"},{"name":"outfile","type":"char *","value":"0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"","address":4361581,"objname":"var19","numchild":"1"},{"name":"sresize","type":"char *","value":"0x1 <error: Cannot access memory at address 0x1>","address":1,"objname":"var18","numchild":"1"},{"name":"num","type":"int","value":"0","objname":"var17","numchild":"0"},{"name":"inptr","type":"FILE *","value":"0x8000","address":32768,"objname":"var16","numchild":"29"},{"name":"outptr","type":"FILE *","value":"NULL","address":0},{"name":"bf","type":"BITMAPFILEHEADER","objname":"var15","numchild":"5"},{"name":"bi","type":"BITMAPINFOHEADER","objname":"var14","numchild":"11"},{"name":"padding","type":"int","value":"0","objname":"var13","numchild":"0"},{"name":"padding1","type":"int","value":"2","objname":"var12","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":6}
+38-exec-step 
+
+GDB: 38^running
+SENDING: Content-Length:51
+
+{"_seq":"38","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff6a2ce80",func="__printf",args=[{name="format",value="0x430a70 \"not valid\""}],file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="28"},thread-id="1",stopped-threads="all",core="14"
+39-stack-list-frames 0 50
+
+GDB: 39^done,stack=[frame={level="0",addr="0x00007ffff6a2ce80",func="__printf",file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="28"},frame={level="1",addr="0x0000000000428179",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x0000000000428179",func="main",args=[{name="argc",value="1"},{name="argv",value="0x7fffffffe838"}],file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="14"},gdb-result-var="$1",return-value="9",thread-id="1",stopped-threads="all",core="14"
+40-stack-list-frames 0 50
+
+GDB: 40^done,stack=[frame={level="0",addr="0x0000000000428179",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="14"}]
+41-stack-list-arguments --simple-values 0 50
+
+GDB: 41^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="1"},{name="argv",type="char **",value="0x7fffffffe838"}]}]
+42-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 42^done,locals=[{name="infile",type="char *",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\""},{name="outfile",type="char *",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\""},{name="sresize",type="char *",value="0x1 <error: Cannot access memory at address 0x1>"},{name="num",type="int",value="0"},{name="inptr",type="FILE *",value="0x8000"},{name="outptr",type="FILE *",value="0x0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="padding",type="int",value="0"},{name="padding1",type="int",value="2"}]
+43-var-update --all-values *
+
+GDB: 43^done,changelist=[]
+44-var-create - * padding1
+
+GDB: 44^done,name="var23",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+45-var-create - * padding
+
+GDB: 45^done,name="var24",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+46-var-create - * bi
+
+GDB: 46^done,name="var25",numchild="11",value="{...}",type="BITMAPINFOHEADER",thread-id="1",has_more="0"
+47-var-create - * bf
+
+GDB: 47^done,name="var26",numchild="5",value="{...}",type="BITMAPFILEHEADER",thread-id="1",has_more="0"
+48-var-create - * inptr
+
+GDB: 48^done,name="var27",numchild="29",value="0x8000",type="FILE *",thread-id="1",has_more="0"
+49-var-create - * num
+
+GDB: 49^done,name="var28",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+50-var-create - * sresize
+
+GDB: 50^done,name="var29",numchild="1",value="0x1 <error: Cannot access memory at address 0x1>",type="char *",thread-id="1",has_more="0"
+51-var-create - * outfile
+
+GDB: 51^done,name="var30",numchild="1",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"",type="char *",thread-id="1",has_more="0"
+52-var-create - * infile
+
+GDB: 52^done,name="var31",numchild="1",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"",type="char *",thread-id="1",has_more="0"
+53-var-create - * argv
+
+GDB: 53^done,name="var32",numchild="1",value="0x7fffffffe838",type="char **",thread-id="1",has_more="0"
+54-var-create - * argc
+
+GDB: 54^done,name="var33",numchild="0",value="1",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1452
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000428179","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"14","exists":true,"args":[{"name":"argc","type":"int","value":"1","objname":"var33","numchild":"0"},{"name":"argv","type":"char **","value":"0x7fffffffe838","address":140737488349240,"objname":"var32","numchild":"1"}],"locals":[{"name":"infile","type":"char *","value":"0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"","address":140737351932320,"objname":"var31","numchild":"1"},{"name":"outfile","type":"char *","value":"0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"","address":4361581,"objname":"var30","numchild":"1"},{"name":"sresize","type":"char *","value":"0x1 <error: Cannot access memory at address 0x1>","address":1,"objname":"var29","numchild":"1"},{"name":"num","type":"int","value":"0","objname":"var28","numchild":"0"},{"name":"inptr","type":"FILE *","value":"0x8000","address":32768,"objname":"var27","numchild":"29"},{"name":"outptr","type":"FILE *","value":"NULL","address":0},{"name":"bf","type":"BITMAPFILEHEADER","objname":"var26","numchild":"5"},{"name":"bi","type":"BITMAPINFOHEADER","objname":"var25","numchild":"11"},{"name":"padding","type":"int","value":"0","objname":"var24","numchild":"0"},{"name":"padding1","type":"int","value":"2","objname":"var23","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":7}
+55-exec-next 
+
+GDB: 55^running
+SENDING: Content-Length:51
+
+{"_seq":"55","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000428d07",func="main",args=[{name="argc",value="1"},{name="argv",value="0x7fffffffe838"}],file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="138"},thread-id="1",stopped-threads="all",core="0"
+56-stack-list-frames 0 50
+
+GDB: 56^done,stack=[frame={level="0",addr="0x0000000000428d07",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="138"}]
+57-stack-list-arguments --simple-values 0 50
+
+GDB: 57^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="1"},{name="argv",type="char **",value="0x7fffffffe838"}]}]
+58-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 58^done,locals=[{name="infile",type="char *",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\""},{name="outfile",type="char *",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\""},{name="sresize",type="char *",value="0x1 <error: Cannot access memory at address 0x1>"},{name="num",type="int",value="0"},{name="inptr",type="FILE *",value="0x8000"},{name="outptr",type="FILE *",value="0x0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="padding",type="int",value="0"},{name="padding1",type="int",value="2"}]
+59-var-update --all-values *
+
+GDB: 59^done,changelist=[]
+60-var-create - * padding1
+
+GDB: 60^done,name="var34",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+61-var-create - * padding
+
+GDB: 61^done,name="var35",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+62-var-create - * bi
+
+GDB: 62^done,name="var36",numchild="11",value="{...}",type="BITMAPINFOHEADER",thread-id="1",has_more="0"
+63-var-create - * bf
+
+GDB: 63^done,name="var37",numchild="5",value="{...}",type="BITMAPFILEHEADER",thread-id="1",has_more="0"
+64-var-create - * inptr
+
+GDB: 64^done,name="var38",numchild="29",value="0x8000",type="FILE *",thread-id="1",has_more="0"
+65-var-create - * num
+
+GDB: 65^done,name="var39",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+66-var-create - * sresize
+
+GDB: 66^done,name="var40",numchild="1",value="0x1 <error: Cannot access memory at address 0x1>",type="char *",thread-id="1",has_more="0"
+67-var-create - * outfile
+
+GDB: 67^done,name="var41",numchild="1",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"",type="char *",thread-id="1",has_more="0"
+68-var-create - * infile
+
+GDB: 68^done,name="var42",numchild="1",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"",type="char *",thread-id="1",has_more="0"
+69-var-create - * argv
+
+GDB: 69^done,name="var43",numchild="1",value="0x7fffffffe838",type="char **",thread-id="1",has_more="0"
+70-var-create - * argc
+
+GDB: 70^done,name="var44",numchild="0",value="1",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1453
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000428d07","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"138","exists":true,"args":[{"name":"argc","type":"int","value":"1","objname":"var44","numchild":"0"},{"name":"argv","type":"char **","value":"0x7fffffffe838","address":140737488349240,"objname":"var43","numchild":"1"}],"locals":[{"name":"infile","type":"char *","value":"0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"","address":140737351932320,"objname":"var42","numchild":"1"},{"name":"outfile","type":"char *","value":"0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"","address":4361581,"objname":"var41","numchild":"1"},{"name":"sresize","type":"char *","value":"0x1 <error: Cannot access memory at address 0x1>","address":1,"objname":"var40","numchild":"1"},{"name":"num","type":"int","value":"0","objname":"var39","numchild":"0"},{"name":"inptr","type":"FILE *","value":"0x8000","address":32768,"objname":"var38","numchild":"29"},{"name":"outptr","type":"FILE *","value":"NULL","address":0},{"name":"bf","type":"BITMAPFILEHEADER","objname":"var37","numchild":"5"},{"name":"bi","type":"BITMAPINFOHEADER","objname":"var36","numchild":"11"},{"name":"padding","type":"int","value":"0","objname":"var35","numchild":"0"},{"name":"padding1","type":"int","value":"2","objname":"var34","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":8}
+71-exec-next 
+
+GDB: 71^running
+SENDING: Content-Length:51
+
+{"_seq":"71","state":"running","status":{},"_id":8}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff69e9b97",func="__libc_start_main",args=[{name="main",value="0x428140 <main>"},{name="argc",value="1"},{name="argv",value="0x7fffffffe838"},{name="init",value="<optimized out>"},{name="fini",value="<optimized out>"},{name="rtld_fini",value="<optimized out>"},{name="stack_end",value="0x7fffffffe828"}],file="../csu/libc-start.c",fullname="/build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c",line="344"},thread-id="1",stopped-threads="all",core="0"
+72-stack-list-frames 0 50
+
+GDB: 72^done,stack=[frame={level="0",addr="0x00007ffff69e9b97",func="__libc_start_main",file="../csu/libc-start.c",fullname="/build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c",line="344"},frame={level="1",addr="0x0000000000402cfa",func="_start"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+
+Child exited with status 1
+
+GDB: ~"[Inferior 1 (process 7260) exited with code 01]\n"
+GDB: =thread-group-exited,id="i1",exit-code="01"
+GDB: *stopped,reason="exited",exit-code="01"
+GDB server terminated with code 0 and signal null
+
+
+Thu Jul 18 2019 03:03:48 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./resize..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="7490"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b20"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="6"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:214
+
+{"path":"/pset3/resize/more/resize.c","line":5,"column":0,"text":"resize.c","content":"","time":1563418961866,"enabled":true,"fullpath":"/home/ubuntu/pset3/resize/more/resize.c","command":"bp-set","_id":2,"id":"1"}
+4-break-insert "/home/ubuntu/pset3/resize/more/resize.c:6"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042815e",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="6",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset3/resize/more/resize.c:6"}
+SENDING: Content-Length:339
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x000000000042815e","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"6","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset3/resize/more/resize.c:6"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/local/lib/libcs50.so.9 from remote target...\n"
+GDB: =library-loaded,id="/usr/local/lib/libcs50.so.9",target-name="/usr/local/lib/libcs50.so.9",host-name="target:/usr/local/lib/libcs50.so.9",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff799ac20",to="0x00007ffff799b8da"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7607a80",to="0x00007ffff76c62f5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libpthread.so.0 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libpthread.so.0",target-name="/lib/x86_64-linux-gnu/libpthread.so.0",host-name="target:/lib/x86_64-linux-gnu/libpthread.so.0",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff73e2bb0",to="0x00007ffff73f10f1"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/librt.so.1",target-name="/lib/x86_64-linux-gnu/librt.so.1",host-name="target:/lib/x86_64-linux-gnu/librt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff71d7200",to="0x00007ffff71da70c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libdl.so.2",target-name="/lib/x86_64-linux-gnu/libdl.so.2",host-name="target:/lib/x86_64-linux-gnu/libdl.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6fd1e50",to="0x00007ffff6fd2bde"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libgcc_s.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libgcc_s.so.1",target-name="/lib/x86_64-linux-gnu/libgcc_s.so.1",host-name="target:/lib/x86_64-linux-gnu/libgcc_s.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff6dbbac0",to="0x00007ffff6dcc3fd"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff69e92d0",to="0x00007ffff6b61c3c"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/librt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libdl-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/bdc55c07d5e5b1d8ab38e2c19b1f535855e084.debug from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+GDB: =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042815e",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="6",thread-groups=["i1"],times="1",original-location="/home/ubuntu/pset3/resize/more/resize.c:6"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 1, main (argc=1, argv=0x7fffffffe838) at resize.c:11\n"
+GDB: ~"11\t    if(argc!=4)\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="1",frame={addr="0x000000000042815e",func="main",args=[{name="argc",value="1"},{name="argv",value="0x7fffffffe838"}],file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="11"},thread-id="1",stopped-threads="all",core="6"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x000000000042815e",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="11"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="1"},{name="argv",type="char **",value="0x7fffffffe838"}]}]
+8-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 8^done,locals=[{name="infile",type="char *",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\""},{name="outfile",type="char *",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\""},{name="sresize",type="char *",value="0x1 <error: Cannot access memory at address 0x1>"},{name="num",type="int",value="0"},{name="inptr",type="FILE *",value="0x8000"},{name="outptr",type="FILE *",value="0x0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="padding",type="int",value="0"},{name="padding1",type="int",value="2"}]
+9-var-update --all-values *
+
+GDB: 9^done,changelist=[]
+10-var-create - * padding1
+
+GDB: 10^done,name="var1",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+11-var-create - * padding
+
+GDB: 11^done,name="var2",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+12-var-create - * bi
+
+GDB: 12^done,name="var3",numchild="11",value="{...}",type="BITMAPINFOHEADER",thread-id="1",has_more="0"
+13-var-create - * bf
+
+GDB: 13^done,name="var4",numchild="5",value="{...}",type="BITMAPFILEHEADER",thread-id="1",has_more="0"
+14-var-create - * inptr
+
+GDB: 14^done,name="var5",numchild="29",value="0x8000",type="FILE *",thread-id="1",has_more="0"
+15-var-create - * num
+
+GDB: 15^done,name="var6",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+16-var-create - * sresize
+
+GDB: 16^done,name="var7",numchild="1",value="0x1 <error: Cannot access memory at address 0x1>",type="char *",thread-id="1",has_more="0"
+17-var-create - * outfile
+
+GDB: 17^done,name="var8",numchild="1",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"",type="char *",thread-id="1",has_more="0"
+18-var-create - * infile
+
+GDB: 18^done,name="var9",numchild="1",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"",type="char *",thread-id="1",has_more="0"
+19-var-create - * argv
+
+GDB: 19^done,name="var10",numchild="1",value="0x7fffffffe838",type="char **",thread-id="1",has_more="0"
+20-var-create - * argc
+
+GDB: 20^done,name="var11",numchild="0",value="1",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1443
+
+{"thread":"1","frames":[{"level":"0","addr":"0x000000000042815e","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"11","exists":true,"args":[{"name":"argc","type":"int","value":"1","objname":"var11","numchild":"0"},{"name":"argv","type":"char **","value":"0x7fffffffe838","address":140737488349240,"objname":"var10","numchild":"1"}],"locals":[{"name":"infile","type":"char *","value":"0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"","address":140737351932320,"objname":"var9","numchild":"1"},{"name":"outfile","type":"char *","value":"0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"","address":4361581,"objname":"var8","numchild":"1"},{"name":"sresize","type":"char *","value":"0x1 <error: Cannot access memory at address 0x1>","address":1,"objname":"var7","numchild":"1"},{"name":"num","type":"int","value":"0","objname":"var6","numchild":"0"},{"name":"inptr","type":"FILE *","value":"0x8000","address":32768,"objname":"var5","numchild":"29"},{"name":"outptr","type":"FILE *","value":"NULL","address":0},{"name":"bf","type":"BITMAPFILEHEADER","objname":"var4","numchild":"5"},{"name":"bi","type":"BITMAPINFOHEADER","objname":"var3","numchild":"11"},{"name":"padding","type":"int","value":"0","objname":"var2","numchild":"0"},{"name":"padding1","type":"int","value":"2","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":4}
+21-exec-step 
+
+GDB: 21^running
+SENDING: Content-Length:51
+
+{"_seq":"21","state":"running","status":{},"_id":4}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000428172",func="main",args=[{name="argc",value="1"},{name="argv",value="0x7fffffffe838"}],file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"},thread-id="1",stopped-threads="all",core="6"
+22-stack-list-frames 0 50
+
+GDB: 22^done,stack=[frame={level="0",addr="0x0000000000428172",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"}]
+23-stack-list-arguments --simple-values 0 50
+
+GDB: 23^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="1"},{name="argv",type="char **",value="0x7fffffffe838"}]}]
+24-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 24^done,locals=[{name="infile",type="char *",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\""},{name="outfile",type="char *",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\""},{name="sresize",type="char *",value="0x1 <error: Cannot access memory at address 0x1>"},{name="num",type="int",value="0"},{name="inptr",type="FILE *",value="0x8000"},{name="outptr",type="FILE *",value="0x0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="padding",type="int",value="0"},{name="padding1",type="int",value="2"}]
+25-var-update --all-values *
+
+GDB: 25^done,changelist=[]
+26-var-create - * padding1
+
+GDB: 26^done,name="var12",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+27-var-create - * padding
+
+GDB: 27^done,name="var13",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+28-var-create - * bi
+
+GDB: 28^done,name="var14",numchild="11",value="{...}",type="BITMAPINFOHEADER",thread-id="1",has_more="0"
+29-var-create - * bf
+
+GDB: 29^done,name="var15",numchild="5",value="{...}",type="BITMAPFILEHEADER",thread-id="1",has_more="0"
+30-var-create - * inptr
+
+GDB: 30^done,name="var16",numchild="29",value="0x8000",type="FILE *",thread-id="1",has_more="0"
+31-var-create - * num
+
+GDB: 31^done,name="var17",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+32-var-create - * sresize
+
+GDB: 32^done,name="var18",numchild="1",value="0x1 <error: Cannot access memory at address 0x1>",type="char *",thread-id="1",has_more="0"
+33-var-create - * outfile
+
+GDB: 33^done,name="var19",numchild="1",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"",type="char *",thread-id="1",has_more="0"
+34-var-create - * infile
+
+GDB: 34^done,name="var20",numchild="1",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"",type="char *",thread-id="1",has_more="0"
+35-var-create - * argv
+
+GDB: 35^done,name="var21",numchild="1",value="0x7fffffffe838",type="char **",thread-id="1",has_more="0"
+36-var-create - * argc
+
+GDB: 36^done,name="var22",numchild="0",value="1",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1452
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000428172","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"13","exists":true,"args":[{"name":"argc","type":"int","value":"1","objname":"var22","numchild":"0"},{"name":"argv","type":"char **","value":"0x7fffffffe838","address":140737488349240,"objname":"var21","numchild":"1"}],"locals":[{"name":"infile","type":"char *","value":"0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"","address":140737351932320,"objname":"var20","numchild":"1"},{"name":"outfile","type":"char *","value":"0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"","address":4361581,"objname":"var19","numchild":"1"},{"name":"sresize","type":"char *","value":"0x1 <error: Cannot access memory at address 0x1>","address":1,"objname":"var18","numchild":"1"},{"name":"num","type":"int","value":"0","objname":"var17","numchild":"0"},{"name":"inptr","type":"FILE *","value":"0x8000","address":32768,"objname":"var16","numchild":"29"},{"name":"outptr","type":"FILE *","value":"NULL","address":0},{"name":"bf","type":"BITMAPFILEHEADER","objname":"var15","numchild":"5"},{"name":"bi","type":"BITMAPINFOHEADER","objname":"var14","numchild":"11"},{"name":"padding","type":"int","value":"0","objname":"var13","numchild":"0"},{"name":"padding1","type":"int","value":"2","objname":"var12","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":5}
+37-exec-step 
+
+GDB: 37^running
+SENDING: Content-Length:51
+
+{"_seq":"37","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":6}
+38-exec-step 
+
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":7}
+39-exec-step 
+
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":8}
+40-exec-step 
+
+PLUGIN: Content-Length:26
+
+{"command":"step","_id":9}
+41-exec-step 
+
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff6a2ce80",func="__printf",args=[{name="format",value="0x430a70 \"not valid\""}],file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="28"},thread-id="1",stopped-threads="all",core="12"
+42-stack-list-frames 0 50
+
+GDB: 38^running
+SENDING: Content-Length:51
+
+{"_seq":"38","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff6a2ceeb",func="__printf",args=[{name="format",value="0x430a70 \"not valid\""}],file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="32"},thread-id="1",stopped-threads="all",core="12"
+43-stack-list-frames 0 50
+
+GDB: 39^running
+SENDING: Content-Length:51
+
+{"_seq":"39","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff6a2cef3",func="__printf",args=[{name="format",value="0x430a70 \"not valid\""}],file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="33"},thread-id="1",stopped-threads="all",core="12"
+44-stack-list-frames 0 50
+
+GDB: 40^running
+SENDING: Content-Length:51
+
+{"_seq":"40","state":"running","status":{},"_id":8}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff6a2cef9",func="__printf",args=[{name="format",value="0x430a70 \"not valid\""}],file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="32"},thread-id="1",stopped-threads="all",core="12"
+45-stack-list-frames 0 50
+
+GDB: 41^running
+SENDING: Content-Length:51
+
+{"_seq":"41","state":"running","status":{},"_id":9}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff6a2cf17",func="__printf",args=[{name="format",value="0x430a70 \"not valid\""}],file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="33"},thread-id="1",stopped-threads="all",core="12"
+46-stack-list-frames 0 50
+
+GDB: 42^done,stack=[frame={level="0",addr="0x00007ffff6a2cf17",func="__printf",file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="33"},frame={level="1",addr="0x0000000000428179",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"}]
+-exec-finish 
+
+GDB: 43^done,stack=[frame={level="0",addr="0x00007ffff6a2cf17",func="__printf",file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="33"},frame={level="1",addr="0x0000000000428179",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"}]
+-exec-finish 
+
+GDB: 44^done,stack=[frame={level="0",addr="0x00007ffff6a2cf17",func="__printf",file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="33"},frame={level="1",addr="0x0000000000428179",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"}]
+-exec-finish 
+
+GDB: 45^done,stack=[frame={level="0",addr="0x00007ffff6a2cf17",func="__printf",file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="33"},frame={level="1",addr="0x0000000000428179",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"}]
+-exec-finish 
+
+GDB: 46^done,stack=[frame={level="0",addr="0x00007ffff6a2cf17",func="__printf",file="printf.c",fullname="/build/glibc-OTsEL5/glibc-2.27/stdio-common/printf.c",line="33"},frame={level="1",addr="0x0000000000428179",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="13"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x0000000000428179",func="main",args=[{name="argc",value="1"},{name="argv",value="0x7fffffffe838"}],file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="14"},gdb-result-var="$1",return-value="9",thread-id="1",stopped-threads="all",core="12"
+47-stack-list-frames 0 50
+
+GDB: ^error,msg="\"finish\" not meaningful in the outermost frame."
+GDB: ^error,msg="\"finish\" not meaningful in the outermost frame."
+GDB: ^error,msg="\"finish\" not meaningful in the outermost frame."
+GDB: ^error,msg="\"finish\" not meaningful in the outermost frame."
+GDB: 47^done,stack=[frame={level="0",addr="0x0000000000428179",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="14"}]
+48-stack-list-arguments --simple-values 0 50
+
+GDB: 48^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="1"},{name="argv",type="char **",value="0x7fffffffe838"}]}]
+49-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 49^done,locals=[{name="infile",type="char *",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\""},{name="outfile",type="char *",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\""},{name="sresize",type="char *",value="0x1 <error: Cannot access memory at address 0x1>"},{name="num",type="int",value="0"},{name="inptr",type="FILE *",value="0x8000"},{name="outptr",type="FILE *",value="0x0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="padding",type="int",value="0"},{name="padding1",type="int",value="2"}]
+50-var-update --all-values *
+
+GDB: 50^done,changelist=[]
+51-var-create - * padding1
+
+GDB: 51^done,name="var23",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+52-var-create - * padding
+
+GDB: 52^done,name="var24",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+53-var-create - * bi
+
+GDB: 53^done,name="var25",numchild="11",value="{...}",type="BITMAPINFOHEADER",thread-id="1",has_more="0"
+54-var-create - * bf
+
+GDB: 54^done,name="var26",numchild="5",value="{...}",type="BITMAPFILEHEADER",thread-id="1",has_more="0"
+55-var-create - * inptr
+
+GDB: 55^done,name="var27",numchild="29",value="0x8000",type="FILE *",thread-id="1",has_more="0"
+56-var-create - * num
+
+GDB: 56^done,name="var28",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+57-var-create - * sresize
+
+GDB: 57^done,name="var29",numchild="1",value="0x1 <error: Cannot access memory at address 0x1>",type="char *",thread-id="1",has_more="0"
+58-var-create - * outfile
+
+GDB: 58^done,name="var30",numchild="1",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"",type="char *",thread-id="1",has_more="0"
+59-var-create - * infile
+
+GDB: 59^done,name="var31",numchild="1",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"",type="char *",thread-id="1",has_more="0"
+60-var-create - * argv
+
+GDB: 60^done,name="var32",numchild="1",value="0x7fffffffe838",type="char **",thread-id="1",has_more="0"
+61-var-create - * argc
+
+GDB: 61^done,name="var33",numchild="0",value="1",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1452
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000428179","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"14","exists":true,"args":[{"name":"argc","type":"int","value":"1","objname":"var33","numchild":"0"},{"name":"argv","type":"char **","value":"0x7fffffffe838","address":140737488349240,"objname":"var32","numchild":"1"}],"locals":[{"name":"infile","type":"char *","value":"0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"","address":140737351932320,"objname":"var31","numchild":"1"},{"name":"outfile","type":"char *","value":"0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"","address":4361581,"objname":"var30","numchild":"1"},{"name":"sresize","type":"char *","value":"0x1 <error: Cannot access memory at address 0x1>","address":1,"objname":"var29","numchild":"1"},{"name":"num","type":"int","value":"0","objname":"var28","numchild":"0"},{"name":"inptr","type":"FILE *","value":"0x8000","address":32768,"objname":"var27","numchild":"29"},{"name":"outptr","type":"FILE *","value":"NULL","address":0},{"name":"bf","type":"BITMAPFILEHEADER","objname":"var26","numchild":"5"},{"name":"bi","type":"BITMAPINFOHEADER","objname":"var25","numchild":"11"},{"name":"padding","type":"int","value":"0","objname":"var24","numchild":"0"},{"name":"padding1","type":"int","value":"2","objname":"var23","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":10}
+62-exec-step 
+
+GDB: 62^running
+SENDING: Content-Length:52
+
+{"_seq":"62","state":"running","status":{},"_id":10}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000428d07",func="main",args=[{name="argc",value="1"},{name="argv",value="0x7fffffffe838"}],file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="138"},thread-id="1",stopped-threads="all",core="12"
+63-stack-list-frames 0 50
+
+GDB: 63^done,stack=[frame={level="0",addr="0x0000000000428d07",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="138"}]
+64-stack-list-arguments --simple-values 0 50
+
+GDB: 64^done,stack-args=[frame={level="0",args=[{name="argc",type="int",value="1"},{name="argv",type="char **",value="0x7fffffffe838"}]}]
+65-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 65^done,locals=[{name="infile",type="char *",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\""},{name="outfile",type="char *",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\""},{name="sresize",type="char *",value="0x1 <error: Cannot access memory at address 0x1>"},{name="num",type="int",value="0"},{name="inptr",type="FILE *",value="0x8000"},{name="outptr",type="FILE *",value="0x0"},{name="bf",type="BITMAPFILEHEADER"},{name="bi",type="BITMAPINFOHEADER"},{name="padding",type="int",value="0"},{name="padding1",type="int",value="2"}]
+66-var-update --all-values *
+
+GDB: 66^done,changelist=[]
+67-var-create - * padding1
+
+GDB: 67^done,name="var34",numchild="0",value="2",type="int",thread-id="1",has_more="0"
+68-var-create - * padding
+
+GDB: 68^done,name="var35",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+69-var-create - * bi
+
+GDB: 69^done,name="var36",numchild="11",value="{...}",type="BITMAPINFOHEADER",thread-id="1",has_more="0"
+70-var-create - * bf
+
+GDB: 70^done,name="var37",numchild="5",value="{...}",type="BITMAPFILEHEADER",thread-id="1",has_more="0"
+71-var-create - * inptr
+
+GDB: 71^done,name="var38",numchild="29",value="0x8000",type="FILE *",thread-id="1",has_more="0"
+72-var-create - * num
+
+GDB: 72^done,name="var39",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+73-var-create - * sresize
+
+GDB: 73^done,name="var40",numchild="1",value="0x1 <error: Cannot access memory at address 0x1>",type="char *",thread-id="1",has_more="0"
+74-var-create - * outfile
+
+GDB: 74^done,name="var41",numchild="1",value="0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"",type="char *",thread-id="1",has_more="0"
+75-var-create - * infile
+
+GDB: 75^done,name="var42",numchild="1",value="0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"",type="char *",thread-id="1",has_more="0"
+76-var-create - * argv
+
+GDB: 76^done,name="var43",numchild="1",value="0x7fffffffe838",type="char **",thread-id="1",has_more="0"
+77-var-create - * argc
+
+GDB: 77^done,name="var44",numchild="0",value="1",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:1453
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000428d07","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"138","exists":true,"args":[{"name":"argc","type":"int","value":"1","objname":"var44","numchild":"0"},{"name":"argv","type":"char **","value":"0x7fffffffe838","address":140737488349240,"objname":"var43","numchild":"1"}],"locals":[{"name":"infile","type":"char *","value":"0x7ffff7de59a0 \"UH\\211\\345AWAVAUATSH\\203\\354(L\\213%\\250\\177!\"","address":140737351932320,"objname":"var42","numchild":"1"},{"name":"outfile","type":"char *","value":"0x428d6d <__libc_csu_init+77> \"H\\203\\303\\001H9\\335u\\352H\\203\\304\\b[]A\\\\A]A^A_\\303\\220f.\\017\\037\\204\"","address":4361581,"objname":"var41","numchild":"1"},{"name":"sresize","type":"char *","value":"0x1 <error: Cannot access memory at address 0x1>","address":1,"objname":"var40","numchild":"1"},{"name":"num","type":"int","value":"0","objname":"var39","numchild":"0"},{"name":"inptr","type":"FILE *","value":"0x8000","address":32768,"objname":"var38","numchild":"29"},{"name":"outptr","type":"FILE *","value":"NULL","address":0},{"name":"bf","type":"BITMAPFILEHEADER","objname":"var37","numchild":"5"},{"name":"bi","type":"BITMAPINFOHEADER","objname":"var36","numchild":"11"},{"name":"padding","type":"int","value":"0","objname":"var35","numchild":"0"},{"name":"padding1","type":"int","value":"2","objname":"var34","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:169
+
+{"path":"/pset3/resize/more/resize.c","line":17,"column":0,"hidden":true,"enabled":true,"fullpath":"/home/ubuntu/pset3/resize/more/resize.c","command":"bp-set","_id":11}
+78-break-insert "/home/ubuntu/pset3/resize/more/resize.c:18"
+
+GDB: 78^done,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x000000000042818b",func="main",file="resize.c",fullname="/home/ubuntu/pset3/resize/more/resize.c",line="18",thread-groups=["i1"],times="0",original-location="/home/ubuntu/pset3/resize/more/resize.c:18"}
+SENDING: Content-Length:343
+
+{"_seq":"78","state":"done","status":{"bkpt":{"number":"2","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x000000000042818b","func":"main","file":"resize.c","fullname":"/home/ubuntu/pset3/resize/more/resize.c","line":"18","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/pset3/resize/more/resize.c:18"}},"_id":11}
+PLUGIN: Content-Length:218
+
+{"path":"/pset3/resize/more/resize.c","line":5,"column":0,"text":"resize.c","content":"","time":1563418961866,"enabled":true,"fullpath":"/home/ubuntu/pset3/resize/more/resize.c","command":"bp-change","_id":12,"id":"1"}
+79-break-enable 1
+
+PLUGIN: Content-Length:31
+
+{"command":"continue","_id":13}
+80-exec-continue 
+
+GDB: 79^done
+SENDING: Content-Length:49
+
+{"_seq":"79","state":"done","status":{},"_id":12}
+GDB: 80^running
+SENDING: Content-Length:52
+
+{"_seq":"80","state":"running","status":{},"_id":13}
+GDB: *running,thread-id="all"
+
+Child exited with status 1
+
+GDB: ~"[Inferior 1 (process 7490) exited with code 01]\n"
+GDB: =thread-group-exited,id="i1",exit-code="01"
+GDB: *stopped,reason="exited",exit-code="01"
+GDB server terminated with code 0 and signal null
